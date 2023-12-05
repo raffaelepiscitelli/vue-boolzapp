@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+body {
+    font-family: sans-serif;
+}
+
 #green-top-background {
     height: 7rem;
     background-color: rgb(0, 150, 136);
@@ -16,5 +28,180 @@
 }
 
 .chat-container {
-    
+    height: 43rem;
+    width: 80%;
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sidebar-chat {
+    background-color: rgba(0, 0, 0, 0.242);
+    width: 35%;
+    height: 100%;
+}
+
+.my-chat-account {
+    width: 100%;
+    height: 7.5%;
+    background-color: rgb(234, 234, 234);
+    justify-content: space-between;
+    border-right: 1px solid rgb(225, 225, 225);
+}
+
+.avatar-container {
+    align-items: center;
+    margin-left: 0.3rem;
+}
+
+.avatar {
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.chat-settings-container {
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.chat-settings-container i {
+    padding: 0 0.5rem;
+}
+
+.notification-settings {
+    background-color: rgb(142, 218, 252);
+    height: 9%;
+    align-items: center;
+}
+
+.background-bell-notification {
+    background-color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+
+.notification-settings div:nth-child(2) {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.notification-settings div:nth-child(2) a {
+    color: rgb(80, 110, 124);
+}
+
+.search-bar-chat {
+    background-color: rgb(250, 250, 250);
+    height: 5%;
+    position: relative;
+}
+
+.container-search-bar-chat {
+    height: 1.8rem;
+    width: 98.5%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-button-container {
+    height: 100%;
+    width: 15%;
+    border-right: 1px solid lightgrey;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-search-bar-chat input {
+    width: 85%;
+    border: solid transparent;
+}
+
+.chat {
+    background-color: rgba(0, 0, 0, 0.399);
+    width: 65%;
+    height: 100%;
+    border-left: 1px solid rgb(225, 225, 225);
+}
+
+.contact-interface {
+    width: 100%;
+    height: 7.5%;
+    background-color: rgb(234, 234, 234);
+    justify-content: space-between;
+}
+
+.contact-avatar-container {
+    align-items: center;
+    margin-left: 0.3rem;
+}
+
+.contact-avatar {
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.contact-information {
+    margin-left: 1rem;
+}
+
+.contact-information span {
+    color: rgb(80, 110, 124);
+    font-size: 0.75rem;
+}
+
+.contact-settings-container {
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
+.contact-settings-container i {
+    padding: 0 0.5rem;
+}
+
+.messages {
+    background-image: url(../img/mine.jpg);
+    height: 92.5%;
+    position: relative;
+}
+
+.container-message-input {
+    height: 8%;
+    width: 100%;
+    background-color: rgb(243, 238, 234);
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-entry-chat {
+    height: 2.5rem;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    border: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-entry-chat input {
+    width: 85%;
+    border: solid transparent;
+}
+
+.container-message-input i:first-child {
+    margin-left: 4.25%;
+}
+
+.container-message-input i:last-child {
+    margin-right: 4.25%;
 }

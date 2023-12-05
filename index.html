@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <title>Boolzapp</title>
 </head>
@@ -12,13 +13,127 @@
 
         <div class="main-container">
 
-            <div id="green-top-background"></div>
+            <div id="green-top-background">
 
-            <div id="grey-background"></div>
+                <div class="chat-container d-flex wrap">
 
-            <div class="chat-container">
+                    <div class="sidebar-chat">
+
+                        <article class="my-chat-account d-flex">
+
+                            <div class="avatar-container d-flex">
+
+                                <img class="avatar" src="./img/avatar_io.jpg" alt="">
+
+                                <p>Sofia</p>
+
+                            </div>
+
+                            <div class="chat-settings-container d-flex">
+
+                                <i class="fa-solid fa-circle-notch" style="color: #b1b1b1;"></i>
+
+                                <i class="fa-solid fa-message" style="color: #b1b1b1;"></i>
+
+                                <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
+                            
+                            </div>
+
+                        </article>
+
+                        <article class="notification-settings d-flex">
+
+                            <div class="background-bell-notification d-flex">
+
+                                <i class="fa-solid fa-bell-slash" style="color: #8edafc;"></i>
+
+                            </div>
+
+                            <div>
+
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+
+                                <a href="">Attiva notifiche desktop</a>
+
+                            </div>
+
+                        </article>
+
+                        <article class="search-bar-chat">
+
+                            <div class="container-search-bar-chat d-flex wrap">
+
+                                <div class="search-button-container d-flex">
+
+                                    <i class="fa-solid fa-magnifying-glass" style="color: #abaeb0;"></i>
+
+                                </div>
+
+                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <div class="chat">
+
+                        <article class="contact-interface d-flex">
+
+                            <div class="contact-avatar-container d-flex">
+
+                                <img class="contact-avatar" src="./img/avatar_1.jpg" alt="">
+
+                                <div class="contact-information">
+
+                                    <p>Michele</p>
+
+                                    <span>Ultimo accesso oggi alle 12:00</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="contact-settings-container d-flex">
+
+                                <i class="fa-solid fa-magnifying-glass" style="color: #b1b1b1;"></i>
+
+                                <i class="fa-solid fa-paperclip" style="color: #b1b1b1;"></i>
+
+                                <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
+                            
+                            </div>
+
+                        </article>
+
+                        <div class="messages">
+
+                            <article class="container-message-input d-flex">
+
+                                <i class="fa-regular fa-face-smile" style="color: #6b7376;"></i>
+
+                                <div class="text-entry-chat d-flex wrap">
+    
+                                    <input type="text" placeholder="Scrivi un messaggio">
+    
+                                </div>
+
+                                <i class="fa-solid fa-microphone" style="color: #6b7376;"></i>
+
+                            </article>
+
+
+
+                        </div>
+
+                    </div>
+                
+                </div>
 
             </div>
+
+            <div id="grey-background"></div>
 
         </div>
     
