@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Boolzapp</title>
 </head>
+
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
@@ -36,7 +38,7 @@
                                 <i class="fa-solid fa-message" style="color: #b1b1b1;"></i>
 
                                 <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
-                            
+
                             </div>
 
                         </article>
@@ -77,13 +79,13 @@
 
                         <ul>
 
-                            <li class="contact-messages d-flex column">
+                            <li class="contact-messages d-flex column" v-for="(contact, index) in contacts":dataIndex="index" @click="openChat(index)">
 
-                                <div class="avatar-contact-container d-flex" v-for = "contact in contacts">
+                                <div class="avatar-contact-container d-flex">
 
                                     <img class="avatar-contact" v-bind:src="contact.avatar" alt="">
 
-                                    <div class="contact-information d-flex">
+                                    <div class="contact-information d-flex column">
 
                                         <p>{{contact.name}}</p>
 
@@ -92,16 +94,12 @@
                                     </div>
 
                                     <span class="last-message-time">12:00</span>
-    
-                                    
-    
+
                                 </div>
-    
+
                             </li>
 
                         </ul>
-
-                        
 
                     </div>
 
@@ -113,7 +111,7 @@
 
                                 <img class="contact-avatar" src="./img/avatar_1.jpg" alt="">
 
-                                <div class="contact-information">
+                                <div class="contact-information-chat">
 
                                     <p>Michele</p>
 
@@ -130,25 +128,18 @@
                                 <i class="fa-solid fa-paperclip" style="color: #b1b1b1;"></i>
 
                                 <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
-                            
+
                             </div>
 
                         </article>
 
                         <div class="messages">
 
-                            <article class="chat-interface d-flex">
+                            <article class="chat-interface d-flex column"
+                                v-for="textMessage in contacts[activeIndex].messages">
 
-                                <div class="sent-message">
-
-                                </div>
-
-                                <div class="sent-message">
-
-                                </div>
-
-                                <div class="received-message">
-
+                                <div v-bind:class="textMessage.status==='sent'?'sent-message':'received-message'">
+                                    {{textMessage.message}}
                                 </div>
 
                             </article>
@@ -158,9 +149,9 @@
                                 <i class="fa-regular fa-face-smile" style="color: #6b7376;"></i>
 
                                 <div class="text-entry-chat d-flex wrap">
-    
+
                                     <input type="text" placeholder="Scrivi un messaggio">
-    
+
                                 </div>
 
                                 <i class="fa-solid fa-microphone" style="color: #6b7376;"></i>
@@ -170,7 +161,7 @@
                         </div>
 
                     </div>
-                
+
                 </div>
 
             </div>
@@ -178,8 +169,9 @@
             <div id="grey-background"></div>
 
         </div>
-    
+
     </div>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
