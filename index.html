@@ -75,6 +75,34 @@
 
                         </article>
 
+                        <ul>
+
+                            <li class="contact-messages d-flex column">
+
+                                <div class="avatar-contact-container d-flex" v-for = "contact in contacts">
+
+                                    <img class="avatar-contact" v-bind:src="contact.avatar" alt="">
+
+                                    <div class="contact-information d-flex">
+
+                                        <p>{{contact.name}}</p>
+
+                                        <span>Ultimo messaggio inviato</span>
+
+                                    </div>
+
+                                    <span class="last-message-time">12:00</span>
+    
+                                    
+    
+                                </div>
+    
+                            </li>
+
+                        </ul>
+
+                        
+
                     </div>
 
                     <div class="chat">
@@ -109,7 +137,23 @@
 
                         <div class="messages">
 
-                            <article class="container-message-input d-flex">
+                            <article class="chat-interface d-flex">
+
+                                <div class="sent-message">
+
+                                </div>
+
+                                <div class="sent-message">
+
+                                </div>
+
+                                <div class="received-message">
+
+                                </div>
+
+                            </article>
+
+                            <article class="message-input d-flex">
 
                                 <i class="fa-regular fa-face-smile" style="color: #6b7376;"></i>
 
@@ -122,8 +166,6 @@
                                 <i class="fa-solid fa-microphone" style="color: #6b7376;"></i>
 
                             </article>
-
-
 
                         </div>
 

@@ -9,6 +9,10 @@
     display: flex;
 }
 
+.column {
+    flex-direction: column;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
@@ -124,8 +128,74 @@ body {
     border: solid transparent;
 }
 
+.contact-messages {
+    background-color: rgb(255, 255, 255);
+    height: 3.9rem;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+
+.contact-messages div:nth-child(2) {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.contact-messages div:nth-child(2) a {
+    color: rgb(80, 110, 124);
+}
+
+.avatar-contact-container {
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.avatar-contact {
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.contact-information {
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.contact-information p {
+    font-size: 1rem;
+}
+
+.last-message-time {
+    font-size: 0.7rem;
+    margin-left: 11.5rem;
+    margin-bottom: 2rem;
+    color: rgb(178, 178, 178);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .chat {
-    background-color: rgba(0, 0, 0, 0.399);
     width: 65%;
     height: 100%;
     border-left: 1px solid rgb(225, 225, 225);
@@ -172,7 +242,32 @@ body {
     position: relative;
 }
 
-.container-message-input {
+.chat-interface {
+    flex-direction: column;
+    padding-top: 3rem;
+    align-items: end;
+
+}
+
+.sent-message {
+    height: 2rem;
+    width: 13rem;
+    background-color: rgb(213, 249, 186);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    margin-right: 5rem;
+}
+
+.received-message {
+    height: 2rem;
+    width: 13rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    margin-right: 32rem;
+}
+
+.message-input {
     height: 8%;
     width: 100%;
     background-color: rgb(243, 238, 234);
@@ -193,15 +288,15 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.text-entry-chat input {
-    width: 85%;
-    border: solid transparent;
-}
-
-.container-message-input i:first-child {
+.message-input i:first-child {
     margin-left: 4.25%;
 }
 
-.container-message-input i:last-child {
+.text-entry-chat input {
+    width: 100%;
+    border: solid transparent;
+}
+
+.message-input i:last-child {
     margin-right: 4.25%;
 }
