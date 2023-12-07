@@ -109,11 +109,11 @@
 
                             <div class="contact-avatar-container d-flex">
 
-                                <img class="contact-avatar" src="./img/avatar_1.jpg" alt="">
+                                <img class="contact-avatar" v-bind:src="contacts[activeIndex].avatar" alt="">
 
                                 <div class="contact-information-chat">
 
-                                    <p>Michele</p>
+                                    <p>{{contacts[activeIndex].name}}</p>
 
                                     <span>Ultimo accesso oggi alle 12:00</span>
 
@@ -150,7 +150,7 @@
 
                                 <div class="text-entry-chat d-flex wrap">
 
-                                    <input type="text" placeholder="Scrivi un messaggio">
+                                    <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="writeMessage(newMessage)">
 
                                 </div>
 

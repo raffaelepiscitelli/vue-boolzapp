@@ -5,6 +5,7 @@ createApp({
     return {
 
       activeIndex: 0,
+      newMessage:'',
 
       contacts: [
         {
@@ -177,6 +178,13 @@ createApp({
         return false;
     }
     this.activeIndex = index;
+    },
+    writeMessage(){
+      console.warn(this.newMessage);
+      this.contacts[this.activeIndex].messages.push(
+        {message: this.newMessage, status: 'sent'}
+        );
+        this.newMessage = '';
     }
   }
 }).mount('#app')
