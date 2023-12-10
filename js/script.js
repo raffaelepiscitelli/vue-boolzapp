@@ -6,6 +6,7 @@ createApp({
 
       activeIndex: 0,
       newMessage:'',
+      searchContact: '',
 
       contacts: [
         {
@@ -185,6 +186,14 @@ createApp({
         {message: this.newMessage, status: 'sent'}
         );
         this.newMessage = '';
+        setTimeout(()=>{
+          this.contacts[this.activeIndex].messages.push(
+            {message: "Ok", status: 'received'}
+          )
+        } ,1000);
+    },
+    searchContactFunction(){
+      
     }
   }
 }).mount('#app')
